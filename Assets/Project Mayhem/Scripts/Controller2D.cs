@@ -27,6 +27,12 @@ public class Controller2D : MonoBehaviour {
 			Debug.DrawRay(raycastOrigins.bottomLeft + Vector2.right * verticalRaySpacing * i, Vector2.up * -2,Color.red);
 		}
 	}
+	public void Move(Vector3 velocity) {
+		UpdateRaycastOrigins();
+
+		transform.Translate (velocity);
+	}
+
 	void UpdateRaycastOrigins() {
 		Bounds bounds = collider.bounds;
 		bounds.Expand (skinWidth * -2);
