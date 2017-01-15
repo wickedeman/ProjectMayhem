@@ -5,12 +5,18 @@ using SpriteFactory;
 
 public class Walk : MonoBehaviour {
 	private SpriteFactory.Sprite mySprite;
+	public string[] _string;
+
+
+
 
 
 
 	// Use this for initialization
 	void Start () {
 		mySprite = GetComponent<SpriteFactory.Sprite> ();
+		_string = mySprite.GetAnimationNames ();
+		Debug.Log (_string[1]);
 
 	}
 	
